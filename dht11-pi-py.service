@@ -4,6 +4,7 @@ Description=dht11 pi express
 [Service]
 WorkingDirectory=/home/pi/dht11-pi-py
 ExecStart=/usr/bin/python3 /home/pi/dht11-pi-py/server.py
+User=pi
 Type=simple
 Restart=always
 RestartSec=3

@@ -13,7 +13,7 @@
 ## Setup on rapsberry pi
 1. install python + pip
    * `apt install python3 python3-pip`
-   * `python3 -m pip install --system -r requirements.txt`
+   * `python3 -m pip install -r requirements.txt`
 2. clone this repo in home directory (`/home/pi/dht11-pi-py/`) 
 3. setup + start systemd service
    * `cp dht11-pi-py.service /etc/systemd/system/dht11-pi-py.service`
