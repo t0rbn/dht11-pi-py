@@ -41,11 +41,13 @@ class MyServer(BaseHTTPRequestHandler):
         if currentReadings is None:
             self.send_response(500)
             self.send_header("Content-type", "text/plain")
+            self.send_header('Access-Control-Allow-Origin', '*')
             self.end_headers()
             return
         
         self.send_response(200)
         self.send_header("Content-type", "application/json")
+        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
         self.wfile.write(bytes(json.dumps({
             "tempC": currentReadings.get("tempC"),
