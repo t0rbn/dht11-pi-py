@@ -25,7 +25,6 @@ def update_readings():
     res = dhtClientInstance.read()
     if not res.is_valid():
         print("got invalid reading from sensor")
-        currentReadings = None
         return
 
     currentReadings = {
